@@ -1,5 +1,5 @@
 # GAME OF LIFE
-A simple implementation of "Game of Life" by Conway in python using pygame.
+A simple implementation of Conway's "Game of Life" in python using pygame.
 
 ## Instructions
 1. Set the initial state of the game using mouse clicks and hit **spacebar** to start the game.
