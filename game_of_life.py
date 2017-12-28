@@ -4,13 +4,13 @@ import time
 GREEN = (0, 255, 0)
 BLACK = (0, 0, 0)
 
-WIDTH = 600
-HEIGHT = 600
-BOX_SIZE = 25
+WIDTH = 800
+HEIGHT = 700
+BOX_SIZE = 20
 SLEEP_TIME = 0.2
 
-rows = HEIGHT/BOX_SIZE
-cols = WIDTH/BOX_SIZE
+rows = WIDTH/BOX_SIZE
+cols = HEIGHT/BOX_SIZE
 
 states = [[0 for j in range(cols)] for i in range(rows)]
 
@@ -30,6 +30,10 @@ def init_states():
                 exit()
 
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    exit()
+
                 if event.key == pygame.K_SPACE:
                     return
 
@@ -102,6 +106,9 @@ def main():
             if event.type == pygame.QUIT:
                 done = True
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    done = True
+
                 if event.key == pygame.K_SPACE:
                     main()
                     return
